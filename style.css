@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #090909;
     background-image: url('./assets/pixels.png');
@@ -48,4 +49,11 @@ a:hover {
 a {
     color: white;
     text-decoration: none;
+}
+
+.content {
+    text-shadow: 1px 1px black;
+    margin: 0 auto;
+    width: 70%;
+    color: white;
 }

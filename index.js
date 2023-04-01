@@ -1,8 +1,9 @@
 // elements
 const aboutlink = document.getElementById('aboutlink');
+const featureslink = document.getElementById('featureslink');
 const downloadlink = document.getElementById('downloadlink');
 const sourcecodelink = document.getElementById('sourcecodelink');
-const LINKS = [aboutlink, downloadlink, sourcecodelink];
+const LINKS = [aboutlink, downloadlink, featureslink, sourcecodelink];
 const DIVS = {};
 
 // fetch divs
