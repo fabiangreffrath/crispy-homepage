@@ -10,6 +10,7 @@ body {
   background-color: #090909;
   background-image: url('./assets/pixels.png');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #header {
@@ -19,7 +20,7 @@ body {
   align-items: center;
   font-family: 'AmazDooM';
   font-size: 7rem;
-  color: #ffffff;
+  color: white;
   text-shadow: 2px 2px black;
   height: 4rem;
 }
@@ -28,7 +29,7 @@ ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  color: #ffffff;
+  color: white;
   font-family: 'AmazDooM';
   font-size: 3rem;
   text-shadow: 1px 1px black;
@@ -38,4 +39,13 @@ ul {
 
 li {
   margin-left: 1rem;
+}
+
+a:hover {
+  color: #971919;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
