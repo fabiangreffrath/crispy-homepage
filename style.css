@@ -70,6 +70,11 @@ a {
     margin: 0 10px;
 }
 
+.menu {
+    width: 600px;
+    border-radius: 20px;
+}
+
 .images {
     display: flex;
     justify-content: center;
