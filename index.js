@@ -2,15 +2,13 @@
 const aboutlink = document.getElementById('aboutlink');
 const featureslink = document.getElementById('featureslink');
 const downloadlink = document.getElementById('downloadlink');
-const sourcecodelink = document.getElementById('sourcecodelink');
 
 const aboutdiv = document.getElementById('aboutdiv');
 const featuresdiv = document.getElementById('featuresdiv');
 const downloaddiv = document.getElementById('downloaddiv');
-const sourcecodediv = document.getElementById('sourcecodediv');
 
-const LINKS = [aboutlink, featureslink, downloadlink, sourcecodelink];
-const DIVS = [aboutdiv, featuresdiv, downloaddiv, sourcecodediv];
+const LINKS = [aboutlink, featureslink, downloadlink];
+const DIVS = [aboutdiv, featuresdiv, downloaddiv];
 
 // set first link & page active
 reddenLink(0);

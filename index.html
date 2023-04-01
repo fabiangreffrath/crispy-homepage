@@ -12,31 +12,46 @@
         <div id="header">Crispy Doom</div>
 
         <!-- nav -->
-        <div>
+        <div class="nav">
             <ul>
+                <!-- internal links -->
                 <li><a id="aboutlink" href="#">About</a></li>
                 <li><a id="featureslink" href="#">Features</a></li>
                 <li><a id="downloadlink" href="#">Download</a></li>
-                <li><a id="sourcecodelink" href="#">Sourcecode</a></li>
+
+                <!-- external links -->
+                <li><a target="_blank" href="https://github.com/fabiangreffrath/crispy-doom">Sourcecode</a></li>
             </ul>
         </div>
 
         <!-- about -->
         <div id="aboutdiv" class="content">
             <p>
-                Crispy Doom is a limit-removing enhanced-resolution Doom source port based on Chocolate Doom. Its name
-                means that its internal 640x400 resolution looks "crisp" and is also a slight reference to its origin.
+                Crispy Doom is a limit-removing enhanced-resolution Doom source port based on
+                <a href="https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom">Chocolate Doom</a>. Its name
+                means that its internal 640x400 resolution looks "crisp" and is also a slight
+                <a href="http://www.mathsisfun.com/recipie.html">reference</a> to its origin.
             </p>
             <h2>Synopsis</h2>
             <p>
-                Crispy Doom is a friendly fork of Chocolate Doom that provides a higher display resolution, removes the
-                static limits of the Doom engine and offers further optional visual, tactical and physical enhancements
-                while remaining entirely config file, savegame, netplay and demo compatible with the original.
+                Crispy Doom is a friendly fork of
+                <a href="https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom">Chocolate Doom</a> that provides
+                a higher display resolution, removes the
+                <a href="https://doomwiki.org/wiki/Static_limits">static limits</a> of the Doom engine and offers
+                further optional visual, tactical and physical enhancements while remaining entirely config file,
+                savegame, netplay and demo compatible with the original.
             </p>
+
+            <div class="images">
+                <img class="thumbnail" src="./assets/screenshot1.jpg" alt="" />
+                <img class="thumbnail" src="./assets/screenshot2.jpg" alt="" />
+            </div>
+
             <h2>Contact</h2>
             <p>
-                Crispy Doom is maintained by Fabian Greffrath. Please report any bugs, glitches or crashes that you
-                encounter to the GitHub Issue Tracker.
+                Crispy Doom is maintained by <a href="mailto:fabian@greffXremovethisXrath.com">Fabian Greffrath</a>.
+                Please report any bugs, glitches or crashes that you encounter to the GitHub
+                <a href="https://github.com/fabiangreffrath/crispy-doom/issues">Issue Tracker</a>.
             </p>
         </div>
 
@@ -48,18 +63,34 @@
         <!-- download -->
         <div id="downloaddiv" class="content">
             <h2>Download</h2>
+            <p>There are many ways to download crispy-doom:</p>
+            <ul>
+                <li>
+                    <a href="https://github.com/fabiangreffrath/crispy-doom/releases/latest"
+                        >Source code and Windows binaries</a
+                    >
+                    (compatible with both x86 and x64 editions) for the latest release.
+                </li>
+                <li>
+                    <a href="http://latest.chocolate-doom.org/">Nightly builds</a> from chocolate-doom.org are also
+                    provided.
+                </li>
+            </ul>
+            <p>To install on Ubuntu ("Eoan Ermine" 19.10 and later)/Debian ("Buster" 10 and later) based systems:</p>
+            <ul>
+                <li>Install using apt on Ubuntu/Debian based systems: "sudo apt-get install crispy-doom"</li>
+                <li>Compile from <a href="https://github.com/fabiangreffrath/crispy-doom">Source</a></li>
+            </ul>
             <p>
-                The canonical homepage for Crispy Doom is https://github.com/fabiangreffrath/crispy-doom. This page
-                hosts the Crispy Doom source code and provides building instructions as well as official binary releases
-                for Windows XP / Vista / 7 / 8.1 / 10 (both x86 and x64 editions). Daily builds of Crispy Doom can be
-                found here: http://latest.chocolate-doom.org/ Crispy Doom can play nearly all variants of Doom. If you
-                don't own any, you may download the Shareware version of Doom, extract it and copy the DOOM1.WAD file
-                into your Crispy Doom directory. Alternatively, you may want to play Crispy Doom with Freedoom and a
-                MegaWAD.
+                Crispy Doom can play nearly all variants of Doom. If you don't own any, you may download the
+                <a
+                    href="http://cdn.debian.net/debian/pool/non-free/d/doom-wad-shareware/doom-wad-shareware_1.9.fixed.orig.tar.gz"
+                    >Shareware</a
+                >
+                version of Doom, extract it and copy the DOOM1.WAD file into your Crispy Doom directory. Alternatively,
+                you may want to play Crispy Doom with
+                <a href="https://www.chocolate-doom.org/wiki/index.php/Freedoom">Freedoom</a> and a MegaWAD.
             </p>
         </div>
-
-        <!-- sourcecode -->
-        <div id="sourcecodediv" class="content"><h2>Source code</h2></div>
     </body>
 </html>
