@@ -12,6 +12,7 @@ body {
     background-image: url('./assets/pixels.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     max-width: 800px;
 }
 
@@ -60,6 +61,7 @@ a {
 .content {
     text-shadow: 1px 1px black;
     color: white;
+    margin: 1rem;
 }
 
 .thumbnail {
