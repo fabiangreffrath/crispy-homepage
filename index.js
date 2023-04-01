@@ -3,37 +3,42 @@ const aboutlink = document.getElementById('aboutlink');
 const featureslink = document.getElementById('featureslink');
 const downloadlink = document.getElementById('downloadlink');
 const sourcecodelink = document.getElementById('sourcecodelink');
-const LINKS = [aboutlink, downloadlink, featureslink, sourcecodelink];
-const DIVS = {};
 
-// fetch divs
-(function fetchdivs() {
-    LINKS.forEach((link) => {
-        DIVS[link.innerText] = document.getElementById(link.innerText);
-    });
-})();
+const aboutdiv = document.getElementById('aboutdiv');
+const featuresdiv = document.getElementById('featuresdiv');
+const downloaddiv = document.getElementById('downloaddiv');
+const sourcecodediv = document.getElementById('sourcecodediv');
+
+const LINKS = [aboutlink, featureslink, downloadlink, sourcecodelink];
+const DIVS = [aboutdiv, featuresdiv, downloaddiv, sourcecodediv];
+
+// set first link & page active
+reddenLink(0);
+showDivAtIndex(0);
 
 // add link listeners
-LINKS.forEach((link) => {
-    link.addEventListener('click', (e) => {
+LINKS.forEach((link, index) => {
+    link.addEventListener('click', () => {
         whitenAllLinks();
-        for (const key in DIVS) {
-            if (key === e.currentTarget.innerText) {
-                reddenLink(e.currentTarget);
-                DIVS[key].style.display = 'block';
-            } else {
-                DIVS[key].style.display = 'none';
-            }
-        }
+        reddenLink(index);
+        showDivAtIndex(index);
     });
 });
 
-// redden link
-function reddenLink(link) {
-    link.classList.add('active');
+function showDivAtIndex(indexToShow) {
+    DIVS.forEach((div, i) => {
+        if (indexToShow === i) {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    });
 }
 
-// whiten links
+function reddenLink(index) {
+    LINKS[index].classList.add('active');
+}
+
 function whitenAllLinks() {
     LINKS.forEach((link) => {
         link.classList.remove('active');
