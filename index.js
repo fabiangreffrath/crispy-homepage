@@ -16,8 +16,10 @@ const DIVS = {};
 // add link listeners
 LINKS.forEach((link) => {
     link.addEventListener('click', (e) => {
+        whitenAllLinks();
         for (const key in DIVS) {
             if (key === e.currentTarget.innerText) {
+                reddenLink(e.currentTarget);
                 DIVS[key].style.display = 'block';
             } else {
                 DIVS[key].style.display = 'none';
@@ -25,3 +27,15 @@ LINKS.forEach((link) => {
         }
     });
 });
+
+// redden link
+function reddenLink(link) {
+    link.classList.add('active');
+}
+
+// whiten links
+function whitenAllLinks() {
+    LINKS.forEach((link) => {
+        link.classList.remove('active');
+    });
+}

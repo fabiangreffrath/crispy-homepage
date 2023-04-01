@@ -42,7 +42,8 @@ li {
     margin-left: 1rem;
 }
 
-a:hover {
+a:hover,
+a.active {
     color: #971919;
 }
 
