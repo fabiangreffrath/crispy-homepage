@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'AmazDooM';
+  src: url('./assets/AmazDooMLeft.woff2') format('woff2'), url('./assets/AmazDooMLeft.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: #090909;
+  background-image: url('./assets/pixels.png');
+  background-size: cover;
+}
+
+#header {
+  margin-top: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'AmazDooM';
+  font-size: 7rem;
+  color: #ffffff;
+  text-shadow: 2px 2px black;
+  height: 4rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  color: #ffffff;
+  font-family: 'AmazDooM';
+  font-size: 3rem;
+  text-shadow: 1px 1px black;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-left: 1rem;
+}
