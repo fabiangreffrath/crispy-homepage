@@ -1,44 +1,48 @@
-// elements
+// fetch elements from document
 const aboutlink = document.getElementById('aboutlink');
 const featureslink = document.getElementById('featureslink');
 const downloadlink = document.getElementById('downloadlink');
-
 const aboutdiv = document.getElementById('aboutdiv');
 const featuresdiv = document.getElementById('featuresdiv');
 const downloaddiv = document.getElementById('downloaddiv');
 
-const LINKS = [aboutlink, featureslink, downloadlink];
-const DIVS = [aboutdiv, featuresdiv, downloaddiv];
+const PAGES = {
+    about: {
+        link: aboutlink,
+        div: aboutdiv,
+    },
+    features: {
+        link: featureslink,
+        div: featuresdiv,
+    },
+    download: {
+        link: downloadlink,
+        div: downloaddiv,
+    },
+};
 
-// set first link & page active
-reddenLink(0);
-showDivAtIndex(0);
-
-// add link listeners
-LINKS.forEach((link, index) => {
-    link.addEventListener('click', () => {
-        whitenAllLinks();
-        reddenLink(index);
-        showDivAtIndex(index);
-    });
-});
-
-function showDivAtIndex(indexToShow) {
-    DIVS.forEach((div, i) => {
-        if (indexToShow === i) {
-            div.style.display = 'block';
+// go to a specific page. desination is a string
+// that matches a key of the PAGES object
+function goToPage(destination) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    for (const key in PAGES) {
+        if (destination === key) {
+            setLinkActive(PAGES[key].link);
+            PAGES[key].div.style.display = 'block';
         } else {
-            div.style.display = 'none';
+            PAGES[key].div.style.display = 'none';
         }
-    });
+    }
 }
 
-function reddenLink(index) {
-    LINKS[index].classList.add('active');
+function setLinkActive(link) {
+    // remove active state from all links
+    for (const key in PAGES) {
+        PAGES[key].link.classList.remove('active');
+    }
+    // set link as active
+    link.classList.add('active');
 }
 
-function whitenAllLinks() {
-    LINKS.forEach((link) => {
-        link.classList.remove('active');
-    });
-}
+// load about page on first load
+goToPage('about');

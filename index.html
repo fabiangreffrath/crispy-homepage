@@ -5,7 +5,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="style.css" rel="stylesheet" />
-        <script src="index.js" type="module"></script>
     </head>
     <body>
         <!-- header -->
@@ -15,9 +14,9 @@
         <div class="nav">
             <ul>
                 <!-- internal links -->
-                <li><a id="aboutlink" href="#">About</a></li>
-                <li><a id="featureslink" href="#">Features</a></li>
-                <li><a id="downloadlink" href="#">Download</a></li>
+                <li><a id="aboutlink" href="javascript:goToPage('about')">About</a></li>
+                <li><a id="featureslink" href="javascript:goToPage('features')">Features</a></li>
+                <li><a id="downloadlink" href="javascript:goToPage('download')">Download</a></li>
 
                 <!-- external links -->
                 <li><a target="_blank" href="https://github.com/fabiangreffrath/crispy-doom">Sourcecode</a></li>
@@ -42,10 +41,11 @@
                 savegame, netplay and demo compatible with the original.
             </p>
 
-            <h2>Cripsness</h2>
+            <h2>Crispness</h2>
             <p>
                 Crispy Doom is offers a "crispness" menu that allows the player to fine-tune settings to their liking.
-                Checkout the <a>features</a> page for a more detailed list of available features.
+                Checkout the <a href="javascript:goToPage('features')">features</a> page for a more detailed list of
+                available features.
             </p>
             <div class="images">
                 <img class="menu" src="./assets/menu.gif" alt="" />
@@ -184,5 +184,6 @@
                 <a href="https://www.chocolate-doom.org/wiki/index.php/Freedoom">Freedoom</a> and a MegaWAD.
             </p>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
