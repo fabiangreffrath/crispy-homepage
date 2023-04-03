@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
     margin: 0 auto;
     background-color: #090909;
     background-image: url('./assets/pixels.png');
@@ -60,7 +61,6 @@ a {
 
 .content {
     text-shadow: 1px 1px black;
-    color: white;
     margin: 1rem;
 }
 
@@ -78,4 +78,20 @@ a {
 .images {
     display: flex;
     justify-content: center;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-top: 1px solid #971919;
+    flex-direction: column;
+    align-items: center;
+    align-text: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+footer p {
+    margin: 0 auto;
 }
