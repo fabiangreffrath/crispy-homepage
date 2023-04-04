@@ -44,5 +44,15 @@ function setLinkActive(link) {
     link.classList.add('active');
 }
 
+// pixel-background transparency on scroll
+let opacity = 1;
+const lowestOffset = 300; // Y position at which opacity stops changing
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset <= lowestOffset) {
+        opacity = 1 - window.pageYOffset / (lowestOffset * 2);
+    }
+    document.getElementById('pixels').style.opacity = opacity;
+});
+
 // load about page on first load
 goToPage('about');

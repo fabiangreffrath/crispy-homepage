@@ -5,28 +5,32 @@
     font-style: normal;
 }
 
+html,
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    margin: 0 auto;
     background-color: #090909;
-    background-image: url('./assets/pixels.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     max-width: 800px;
+    margin: 0 auto;
+    color: white;
 }
 
+/* header & navbar */
+
 #header {
-    margin-top: 95px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 95px;
     font-family: 'AmazDooM';
     font-size: 7rem;
     color: white;
     text-shadow: 2px 2px black;
     height: 4rem;
+}
+
+.nav {
+    position: relative;
 }
 
 .nav ul {
@@ -50,6 +54,21 @@ body {
     text-decoration: none;
 }
 
+/* pixels background */
+
+#pixels {
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/pixels.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* links */
+
 a:hover,
 a.active {
     color: #971919;
@@ -59,10 +78,15 @@ a {
     color: white;
 }
 
+/* text content */
+
 .content {
     text-shadow: 1px 1px black;
     margin: 1rem;
+    position: relative;
 }
+
+/* images */
 
 .thumbnail {
     width: 350px;
@@ -79,6 +103,8 @@ a {
     display: flex;
     justify-content: center;
 }
+
+/* footer */
 
 footer {
     margin-top: 4rem;
