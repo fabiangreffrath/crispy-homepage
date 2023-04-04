@@ -88,20 +88,24 @@ a {
 
 /* images */
 
-.thumbnail {
-    width: 350px;
-    border-radius: 20px;
-    margin: 0 10px;
+.images {
+    display: flex;
+    justify-content: center;
 }
 
-.menu {
+.single {
     width: 600px;
     border-radius: 20px;
 }
 
-.images {
-    display: flex;
-    justify-content: center;
+.double {
+    width: 350px;
+    border-radius: 20px;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
 }
 
 /* footer */
