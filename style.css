@@ -124,6 +124,7 @@ footer {
     align-text: center;
     justify-content: space-around;
     display: flex;
+    position: relative;
 }
 
 footer p {
