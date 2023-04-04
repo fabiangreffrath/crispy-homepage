@@ -103,6 +103,10 @@ a {
     border-radius: 20px;
 }
 
+figure {
+    margin: 0 10px;
+}
+
 figcaption {
     font-style: italic;
     text-align: center;
