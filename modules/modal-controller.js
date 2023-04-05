@@ -1,5 +1,5 @@
 const MODALDIV = document.getElementById('modal');
-const MODALIMAGE = document.getElementById('modal-image-placeholder');
+const MODALIMAGE_PLACEHOLDER = document.getElementById('modal-image-placeholder');
 
 export class ModalController {
     constructor() {
@@ -26,7 +26,7 @@ export class ModalController {
         if (window.innerWidth < 600) {
             return;
         }
-        MODALIMAGE.src = e.src;
+        MODALIMAGE_PLACEHOLDER.src = e.src;
         MODALDIV.style.display = 'block';
     }
 }

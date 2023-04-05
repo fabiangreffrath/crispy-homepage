@@ -4,13 +4,11 @@ const PAGES = {
     download: document.getElementById('download'),
 };
 
-const STARTINGPAGE = 'about';
-
 export class PageController {
     constructor() {
         this.links = document.getElementsByClassName('link');
+        this.activePage = 'about'; // starting page
         this.addLinkListeners();
-        this.activePage = STARTINGPAGE;
         this.goToActivePage();
     }
 

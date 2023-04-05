@@ -1,4 +1,4 @@
-const PIXELBACKGROUND = document.getElementById('pixels');
+const PIXELBACKGROUND = document.getElementById('pixel-background');
 const LOWESTOFFSET = 300; // Y position at which opacity stops changing
 
 export class PixelController {
