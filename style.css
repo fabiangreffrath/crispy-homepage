@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 95px;
+    margin-top: 90px;
     font-family: 'AmazDooM';
     font-size: 7rem;
     color: white;
@@ -54,6 +54,35 @@ body {
     text-decoration: none;
 }
 
+@media screen and (max-width: 600px) {
+    #header {
+        font-size: 6rem;
+        margin-top: 70px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #header {
+        font-size: 5rem;
+        margin-top: 50px;
+    }
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #header {
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+}
 /* pixels background */
 
 #pixels {
@@ -91,20 +120,32 @@ a {
 .images {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+img {
+    width: 100%;
 }
 
 .single {
-    width: 600px;
+    width: 90%;
     border-radius: 20px;
 }
 
 .double {
-    width: 350px;
+    width: 100%;
     border-radius: 20px;
 }
 
 figure {
-    margin: 0 10px;
+    margin: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+    figure {
+        width: 45%;
+    }
 }
 
 figcaption {
@@ -120,8 +161,7 @@ footer {
     font-size: 0.8rem;
     border-top: 1px solid #971919;
     flex-direction: column;
-    align-items: center;
-    align-text: center;
+    text-align: center;
     justify-content: space-around;
     display: flex;
     position: relative;
