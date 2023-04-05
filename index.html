@@ -14,20 +14,25 @@
         <div id="header">Crispy Doom</div>
 
         <!-- nav -->
-        <div class="nav">
+        <nav>
             <ul>
                 <!-- internal links -->
-                <li><a id="aboutlink" href="javascript:goToPage('about')">About</a></li>
-                <li><a id="featureslink" href="javascript:goToPage('features')">Features</a></li>
-                <li><a id="downloadlink" href="javascript:goToPage('download')">Download</a></li>
+                <li><a data-to="about" class="link active" href="#">About</a></li>
+                <li><a data-to="features" class="link" href="#">Features</a></li>
+                <li><a data-to="download" class="link" href="#">Download</a></li>
 
                 <!-- external links -->
                 <li><a target="_blank" href="https://github.com/fabiangreffrath/crispy-doom">Sourcecode</a></li>
             </ul>
+        </nav>
+
+        <!-- modal - invisible until toggled by ModalController class -->
+        <div id="modal">
+            <img id="modal-image-placeholder" />
         </div>
 
         <!-- about -->
-        <div id="aboutdiv" class="content">
+        <div id="about" class="page">
             <p>
                 Crispy Doom is a limit-removing enhanced-resolution Doom source port based on
                 <a href="https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom">Chocolate Doom</a>. Its name
@@ -67,30 +72,30 @@
             </ul>
 
             <!-- gifs -->
-            <div class="images">
+            <div class="image-row">
                 <figure>
-                    <img class="double" src="./assets/resolution.gif" alt="" />
+                    <img class="modal-image" src="./assets/resolution.gif" alt="" />
                     <figcaption>Double the resolution</figcaption>
                 </figure>
                 <figure>
-                    <img class="double" src="./assets/widescreen.gif" alt="" />
+                    <img class="modal-image" src="./assets/widescreen.gif" alt="" />
                     <figcaption>Widescreen support</figcaption>
                 </figure>
             </div>
 
             <h2>Crispness</h2>
             <p>
-                Crispy Doom is offers a "crispness" menu that allows the player to fine-tune settings to their liking.
-                Checkout the <a href="javascript:goToPage('features')">features</a> page for a more detailed list of
+                Crispy Doom offers a "crispness" menu that allows the player to fine-tune settings to their liking.
+                Checkout the <a class="link" data-to="features" href="#">features</a> page for a more detailed list of
                 available features.
             </p>
-            <div class="images">
-                <img class="single" src="./assets/menu.gif" alt="" />
+            <div class="image-row">
+                <img class="modal-image single-row-image" src="./assets/menu.gif" />
             </div>
         </div>
 
         <!-- features -->
-        <div id="featuresdiv" class="content">
+        <div id="features" class="page">
             <h2>Objectives & Features</h2>
             <p>
                 Crispy Doom is a source port that aims to provide a faithful Doom gaming experience while also featuring
@@ -100,7 +105,7 @@
 
             <p>
                 In addition to the core features mentionned in the
-                <a href="javascript:goToPage('about')">homepage</a>, the following optional user-visible and audible
+                <a data-to="about" class="link" href="#">homepage</a>, the following optional user-visible and audible
                 features are available:
             </p>
             <ul>
@@ -163,7 +168,7 @@
         </div>
 
         <!-- download -->
-        <div id="downloaddiv" class="content">
+        <div id="download" class="page">
             <h2>Download</h2>
             <p>Windows:</p>
             <ul>
@@ -207,6 +212,6 @@
                 <a href="https://github.com/kiwphi/crispy-homepage">here</a>
             </p>
         </footer>
-        <script src="index.js"></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>

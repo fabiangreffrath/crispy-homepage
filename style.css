@@ -21,23 +21,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 90px;
     font-family: 'AmazDooM';
     font-size: 7rem;
-    color: white;
     text-shadow: 2px 2px black;
     height: 4rem;
 }
 
-.nav {
+nav {
     position: relative;
 }
 
-.nav ul {
+nav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    color: white;
     font-family: 'AmazDooM';
     font-size: 3rem;
     text-shadow: 1px 1px black;
@@ -45,11 +44,11 @@ body {
     margin: 0;
 }
 
-.nav li {
+nav li {
     margin-left: 1rem;
 }
 
-.nav a {
+nav a {
     color: white;
     text-decoration: none;
 }
@@ -60,7 +59,7 @@ body {
         margin-top: 70px;
     }
 
-    .nav ul {
+    nav ul {
         flex-wrap: wrap;
         font-size: 2rem;
     }
@@ -71,7 +70,7 @@ body {
         font-size: 5rem;
         margin-top: 50px;
     }
-    .nav ul {
+    nav ul {
         flex-direction: column;
         text-align: center;
     }
@@ -107,9 +106,9 @@ a {
     color: white;
 }
 
-/* text content */
+/* pages & content */
 
-.content {
+.page {
     text-shadow: 1px 1px black;
     margin: 1rem;
     position: relative;
@@ -117,25 +116,24 @@ a {
 
 /* images */
 
-.images {
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.image-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
 }
 
-img {
-    width: 100%;
+.modal-image {
+    cursor: pointer;
 }
 
-.single {
+.single-row-image {
     width: 90%;
-    border-radius: 20px;
-}
-
-.double {
-    width: 100%;
-    border-radius: 20px;
 }
 
 figure {
@@ -160,13 +158,87 @@ footer {
     padding: 1rem;
     font-size: 0.8rem;
     border-top: 1px solid #971919;
+    display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-around;
-    display: flex;
     position: relative;
 }
 
 footer p {
     margin: 0 auto;
+}
+
+/* modal */
+
+#modalcheck:checked ~ #modal {
+    display: block;
+}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9998;
+}
+
+#modal-image-placeholder {
+    margin-top: 1rem;
+    border-radius: 20px;
+    width: 70%;
+    position: fixed;
+    left: 15%;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
