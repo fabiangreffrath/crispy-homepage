@@ -4,36 +4,39 @@ const PAGES = {
     download: document.getElementById('download'),
 };
 
+const STARTINGPAGE = 'about';
+
 export class PageController {
     constructor() {
         this.links = document.getElementsByClassName('link');
         this.addLinkListeners();
-        this.goToPage('about');
+        this.activePage = STARTINGPAGE;
+        this.goToActivePage();
     }
 
     addLinkListeners() {
         for (const link of this.links) {
             link.addEventListener('click', () => {
-                this.goToPage(link.getAttribute('data-to'));
-                this.setAllLinksInactive();
-                this.setLinkActive(link);
+                this.activePage = link.getAttribute('data-to');
+                this.setActiveNavbarLink();
+                this.goToActivePage();
             });
         }
     }
 
-    setLinkActive(link) {
-        link.classList.add('active');
-    }
-
-    setAllLinksInactive() {
+    setActiveNavbarLink() {
         for (const link of this.links) {
-            link.classList.remove('active');
+            if (link.getAttribute('data-to') === this.activePage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
         }
     }
 
-    goToPage(destination) {
+    goToActivePage() {
         for (const key in PAGES) {
-            if (destination === key) {
+            if (this.activePage === key) {
                 PAGES[key].style.display = 'block';
             } else {
                 PAGES[key].style.display = 'none';
