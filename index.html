@@ -196,20 +196,41 @@
             <ul>
                 <li>Get <a href="http://latest.chocolate-doom.org/">Nightly builds</a> from chocolate-doom.org</li>
                 <li>
-                    Older releases, source code and 32-bit binaries are also available on the
+                    Older releases and 32-bit binaries are also available on the
                     <a href="https://github.com/fabiangreffrath/crispy-doom/releases">Github Releases</a> page
+                </li>
+                <li>
+                    Install using apt on Ubuntu/Debian based systems:
+                    <span>apt-get install crispy-doom</span>
                 </li>
             </ul>
 
             <!-- linux -->
-            <h4 class="download-platform">Linux</h4>
+            <h4 class="download-platform">Building from source</h4>
+            <h4>Build instructions for Debian-based systems</h4>
+            <p>Get the pre-requisites:</p>
             <ul>
-                <li>
-                    Install using apt on Ubuntu/Debian based systems:
-                    <span class="code">sudo apt-get install crispy-doom</span>
-                </li>
-                <li>Compile from <a href="https://github.com/fabiangreffrath/crispy-doom">Source</a></li>
+                <li>Download the <a href="https://github.com/fabiangreffrath/crispy-doom">source code</a></li>
+                <li>sudo apt install build-essential automake git</li>
+                <li>sudo apt build-dep crispy-doom</li>
             </ul>
+            <p>Then start the compilation:</p>
+            <ul>
+                <li>cd crispy-doom</li>
+                <li>autoreconf -fiv</li>
+                <li>./configure</li>
+                <li>make</li>
+            </ul>
+
+            <h4>Building on Windows</h4>
+            <p>
+                Brief instructions to set up a build system on Windows can be found in the
+                <a href="https://github.com/fabiangreffrath/crispy-doom/wiki/Building-on-Windows">Crispy Doom Wiki</a>.
+                A much more detailed guide is provided in the
+                <a href="https://www.chocolate-doom.org/wiki/index.php/Building_Chocolate_Doom_on_Windows"
+                    >Chocolate Doom Wiki</a
+                >, but applies to Crispy Doom as well for most parts.
+            </p>
 
             <!-- notes -->
             <h4 class="download-platform">Notes</h4>
