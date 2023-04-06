@@ -16,7 +16,7 @@ export class BackgroundController {
 
     setRandomImage() {
         const roll = randomInRange(1, NUMBEROFIMAGES);
-        const backgroundImageString = `url("http://localhost:8080/assets/backgrounds/${roll}.png")`;
+        const backgroundImageString = `url("./assets/backgrounds/${roll}.png")`;
         PIXELATEDBACKGROUND.style.backgroundImage = backgroundImageString;
     }
 
