@@ -22,11 +22,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 20px;
     font-family: 'AmazDooM';
     font-size: 7rem;
     text-shadow: 2px 2px black;
-    height: 4rem;
+}
+
+#title img {
+    width: 90%;
 }
 
 nav {
@@ -49,16 +52,11 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #eab46c;
     text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
-    #title {
-        font-size: 6rem;
-        margin-top: 70px;
-    }
-
     nav ul {
         flex-wrap: wrap;
         font-size: 2rem;
@@ -66,28 +64,18 @@ nav a {
 }
 
 @media screen and (max-width: 400px) {
-    #title {
-        font-size: 5rem;
-        margin-top: 50px;
-    }
     nav ul {
         flex-direction: column;
         text-align: center;
+        font-size: 2rem;
     }
 }
 
-@media screen and (max-width: 300px) {
-    #title {
-        font-size: 3rem;
-        margin-top: 30px;
-    }
-}
 /* pixel background */
 
-#pixel-background {
+#pixelated-background {
     width: 100%;
     height: 100%;
-    background-image: url('./assets/pixels.png');
     background-size: cover;
     background-repeat: no-repeat;
     position: fixed;
