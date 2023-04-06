@@ -103,13 +103,6 @@ a {
     position: relative;
 }
 
-.download-platform {
-    background-color: #471919;
-    border-radius: 3px;
-    padding: 5px;
-    text-align: center;
-}
-
 /* images */
 
 img {
@@ -149,6 +142,13 @@ figcaption {
 
 /* download */
 
+.download-platform {
+    background-color: #471919;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
 #latest-release {
     display: flex;
     align-items: center;
@@ -159,6 +159,7 @@ figcaption {
 }
 
 #download-button {
+    color: #eab46c;
     background-color: #971919;
     padding: 7px;
     font-size: 1.5rem;
