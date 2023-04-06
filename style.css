@@ -265,3 +265,11 @@ footer p {
         opacity: 1;
     }
 }
+
+/* misc */
+
+.code {
+    border-radius: 2px;
+    background-color: #505050;
+    font-family: monospace;
+}
