@@ -1,6 +1,6 @@
 const PAGES = {
     about: document.getElementById('about'),
-    features: document.getElementById('features'),
+    usage: document.getElementById('usage'),
     download: document.getElementById('download'),
 };
 

@@ -97,10 +97,34 @@ a {
 
 /* pages & content */
 
+.centered-single {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 .page {
     text-shadow: 1px 1px black;
     margin: 2rem;
     position: relative;
+}
+
+.more-text {
+    display: none;
+}
+
+.show-more-button {
+    font-weight: bold;
+    padding: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1.3px solid white;
+}
+
+.show-more-button:active,
+.show-more-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* images */
