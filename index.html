@@ -3,7 +3,7 @@
     <head>
         <title>Crispy Doom</title>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="style.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
         <script type="module" src="index.js"></script>
@@ -13,7 +13,7 @@
         <div id="pixelated-background"></div>
 
         <!-- title -->
-        <div id="title"><img src="./assets/images/title.png" /></div>
+        <div id="title"><img src="./assets/images/title.png" alt="title" /></div>
 
         <!-- nav -->
         <nav>
@@ -30,7 +30,7 @@
 
         <!-- modal - invisible until toggled by ModalController class -->
         <div id="modal">
-            <img id="modal-image-placeholder" />
+            <img src="./assets/images/placeholder.png" id="modal-image-placeholder" alt="pixelated-background" />
         </div>
 
         <!-- about -->
@@ -53,11 +53,11 @@
             <!-- gifs -->
             <div class="image-row">
                 <figure>
-                    <img class="modal-image" src="./assets/images/resolution.gif" alt="" />
+                    <img class="modal-image" src="./assets/images/resolution.gif" alt="resolution-comparison" />
                     <figcaption>Double the resolution</figcaption>
                 </figure>
                 <figure>
-                    <img class="modal-image" src="./assets/images/widescreen.gif" alt="" />
+                    <img class="modal-image" src="./assets/images/widescreen.gif" alt="widescreen-feature" />
                     <figcaption>Widescreen support</figcaption>
                 </figure>
             </div>
@@ -164,7 +164,7 @@
                 available features.
             </p>
             <div class="image-row">
-                <img class="modal-image single-row-image" src="./assets/images/menu.gif" />
+                <img class="modal-image single-row-image" src="./assets/images/menu.gif" alt="cripsness-menu" />
             </div>
         </div>
 
