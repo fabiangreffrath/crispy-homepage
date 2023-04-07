@@ -143,11 +143,26 @@ a {
     margin: 0.5rem 1rem 2rem;
 }
 
+.header-with-icon {
+    display: flex;
+    justify-content: start;
+    padding: 5px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.header-with-icon h2 {
+    margin: 0;
+}
+
+.header-with-icon img {
+    width: 25px;
+    margin-right: 5px;
+}
 /* images */
 
 img {
     width: 100%;
-    border-radius: 20px;
 }
 
 .image-row {
@@ -159,6 +174,7 @@ img {
 
 .modal-image {
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .single-row-image {
