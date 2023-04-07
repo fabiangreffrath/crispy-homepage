@@ -169,7 +169,80 @@
         </div>
 
         <!-- usage -->
-        <div id="usage" class="page">Usage</div>
+        <div id="usage" class="page">
+            <h2>Command-line parameters</h2>
+            <div class="command-wrapper">
+                <span class="command">-dm3</span>
+                <p>Specifies the Deathmatch 3.0 rules (weapons stay, items respawn) for netgames (since 4.1).</p>
+
+                <span class="command">-episode 1 or -episode 2</span>
+                <p>
+                    Episode 1 launches Hell on Earth and -episode 2 launches No Rest for the Living episode if the Doom
+                    2 IWAD shipped with the Doom 3: BFG Edition is used.
+                </p>
+
+                <span class="command">-warp 1a</span>
+                <p>Warps to the secret level E1M10: Sewers of XBox Doom IWAD (since 2.3).</p>
+
+                <span class="command">-mergedump &lt;file&gt;</span>
+                <p>
+                    Merges the PWAD file(s) given on the command line with the IWAD file and writes the resulting data
+                    into the &lt;file&gt; given as argument. May be considered as a replacement for the DEUSF.EXE tool
+                    (since 2.3).
+                </p>
+
+                <span class="command">-lumpdump</span>
+                <p>Dumps raw content of a lump into a file (since 5.7).</p>
+
+                <span class="command">-blockmap</span>
+                <p>Forces a (re-)building of the BLOCKMAP lumps for loaded maps (since 2.3).</p>
+
+                <span class="command">-playdemo demoname -warp N</span>
+                <p>Plays back fast-forward up to the requested map (since 3.0).</p>
+
+                <span class="command">-loadgame N -record demoname & -loadgame N -playdemo demoname</span>
+                <p>Allow to record and play demos starting from a savegame instead of the level start (since 4.0).</p>
+
+                <span class="command">-playdemo demoname1 -record demoname2</span>
+                <p>
+                    Plays back fast-forward until the end of demoname1 and continues recording as demoname2 (new in
+                    5.5).
+                </p>
+
+                <span class="command">-fliplevels</span>
+                <p>Loads mirrored versions of the maps (this was the default on April 1st up to version 5.0).</p>
+
+                <span class="command">-flipweapons</span>
+                <p>Flips the player's weapons (new in 5.3).</p>
+
+                <span class="command">-levelstat</span>
+                <p>Prints a levelstat.txt file with statistics for each completed level (new in 5.9.0).</p>
+
+                <span class="command">-pistolstart</span>
+                <p>Reset health, armor and inventory at start of each level in Doom (new in 5.9.2)</p>
+
+                <span class="command">-wandstart</span>
+                <p>Reset health, armor and inventory at start of each level in Heretic (new in 5.9.2)</p>
+
+                <span class="command">-doubleammo</span>
+                <p>Doubles ammo pickup rate in Doom and Strife (new in 5.11).</p>
+
+                <span class="command">-moreammo</span>
+                <p>Increases ammo pickup rate by 50% in Heretic (new in 5.11).</p>
+
+                <span class="command">-moremana</span>
+                <p>Increases mana pickup rate by 50% in Hexen (new in 5.11).</p>
+
+                <span class="command">-fast</span>
+                <p>Enables fast monsters in Heretic and Hexen (new in 5.11).</p>
+
+                <span class="command">-autohealth</span>
+                <p>Enables automatic use of Quartz flasks and Mystic urns in Heretic and Hexen (new in 5.11).</p>
+
+                <span class="command">-keysloc</span>
+                <p>Enables display of keys on the automap in Heretic (new in 5.11).</p>
+            </div>
+        </div>
 
         <!-- download -->
         <div id="download" class="page">

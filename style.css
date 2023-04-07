@@ -114,6 +114,7 @@ a {
 }
 
 .show-more-button {
+    background-color: rgba(255, 255, 255, 0.1);
     font-weight: bold;
     padding: 5px;
     font-size: 0.8rem;
@@ -124,7 +125,22 @@ a {
 
 .show-more-button:active,
 .show-more-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.command-wrapper {
+    margin: 0 20px;
+}
+
+.command {
+    display: block;
+    padding: 7px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.command-wrapper p {
+    margin: 0.5rem 1rem 2rem;
 }
 
 /* images */
@@ -167,7 +183,7 @@ figcaption {
 /* download */
 
 .download-platform {
-    background-color: #471919;
+    background-color: rgba(71, 25, 25, 0.7);
     border-radius: 3px;
     padding: 5px;
     text-align: center;
@@ -184,7 +200,7 @@ figcaption {
 
 #download-button {
     color: #eab46c;
-    background-color: #971919;
+    background-color: rgba(151, 25, 25, 0.7);
     padding: 7px;
     font-size: 1.5rem;
     border-radius: 3px;
