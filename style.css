@@ -183,10 +183,22 @@ figcaption {
 /* download */
 
 .download-platform {
+    display: flex;
+    justify-content: start;
     background-color: rgba(71, 25, 25, 0.7);
     border-radius: 3px;
     padding: 5px;
     text-align: center;
+    margin-top: 2rem;
+}
+
+.download-platform h4 {
+    margin: 0;
+}
+
+.download-platform img {
+    width: 15px;
+    margin-right: 10px;
 }
 
 #latest-release {
