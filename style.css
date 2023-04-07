@@ -159,6 +159,11 @@ a {
     width: 25px;
     margin-right: 5px;
 }
+
+#getting-started-components p {
+    margin-left: 1rem;
+}
+
 /* images */
 
 img {
