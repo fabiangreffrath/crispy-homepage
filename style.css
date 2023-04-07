@@ -213,8 +213,8 @@ figcaption {
 }
 
 .download-platform img {
-    width: 15px;
-    margin-right: 10px;
+    width: 20px;
+    margin: 0 10px 0 5px;
 }
 
 #latest-release {
