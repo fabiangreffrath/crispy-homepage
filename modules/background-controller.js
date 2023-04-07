@@ -4,7 +4,7 @@ const PIXELATEDBACKGROUND = document.getElementById('pixelated-background');
 const LOWESTOFFSET = 300; // Y position at which opacity stops changing
 
 // total number of image files in the assets/backgrounds folder
-const NUMBEROFIMAGES = 7;
+const NUMBEROFIMAGES = 9;
 
 export class BackgroundController {
     constructor() {
