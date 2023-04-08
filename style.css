@@ -113,7 +113,7 @@ a {
     display: none;
 }
 
-.show-more-button {
+.toggle-button {
     background-color: rgba(255, 255, 255, 0.1);
     font-weight: bold;
     padding: 5px;
@@ -123,13 +123,13 @@ a {
     border: 1.3px solid white;
 }
 
-.show-more-button:active,
-.show-more-button:hover {
+.toggle-button:active,
+.toggle-button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .command-wrapper {
-    margin: 0 20px;
+    margin: 1rem;
 }
 
 .command {

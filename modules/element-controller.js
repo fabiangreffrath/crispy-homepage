@@ -1,14 +1,20 @@
+const SHOW_TEXT = '\u2965 Show more...';
+const HIDE_TEXT = '\u2963 Collapse';
+
 export class ElementController {
     constructor() {
-        this.showMoreButtons = document.getElementsByClassName('show-more-button');
-        this.addShowMoreListeners();
+        this.toggleButtons = document.getElementsByClassName('toggle-button');
+        this.addToggleButtonsListeners();
     }
 
-    addShowMoreListeners() {
-        for (const showMoreButton of this.showMoreButtons) {
-            showMoreButton.addEventListener('click', () => {
-                document.getElementById(showMoreButton.getAttribute('data-div')).style.display = 'block';
-                showMoreButton.style.display = 'none';
+    addToggleButtonsListeners() {
+        for (const toggleButton of this.toggleButtons) {
+            toggleButton.innerText = SHOW_TEXT;
+            toggleButton.addEventListener('click', () => {
+                const divStyle = document.getElementById(toggleButton.getAttribute('data-div')).style;
+
+                divStyle.display = divStyle.display === 'block' ? 'none' : 'block';
+                toggleButton.innerText = divStyle.display === 'block' ? HIDE_TEXT : SHOW_TEXT;
             });
         }
     }
