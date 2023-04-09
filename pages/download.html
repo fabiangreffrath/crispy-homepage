@@ -1,0 +1,90 @@
+<h2>Get Crispy-Doom</h2>
+<p>
+    In here you can find all possible version of crispy-doom. In addition, you still need a
+    <a href="https://doomwiki.org/wiki/WAD">WAD</a> in order to play. Check out the
+    <a class="link" data-to="usage" href="#">usage</a> page for more details.
+</p>
+<!-- latest release -->
+<div id="latest-release">
+    <a
+        href="https://github.com/fabiangreffrath/crispy-doom/releases/download/crispy-doom-6.0/crispy-doom-6.0.0-win64.zip"
+        id="download-button"
+        >Download</a
+    >
+    <div>
+        <h3>Latest Stable Release: v6.0</h3>
+        <a href="https://github.com/fabiangreffrath/crispy-doom/releases/tag/crispy-doom-6.0">View Release Notes</a>
+    </div>
+</div>
+
+<!-- other downloads -->
+<div class="download-platform">
+    <img src="./assets/icons/windows.svg" alt="win" />
+    <h4>Other Windows Binaries</h4>
+</div>
+<ul>
+    <li>
+        Older releases and 32-bit binaries are available on the
+        <a href="https://github.com/fabiangreffrath/crispy-doom/releases">Github Releases</a> page
+    </li>
+    <li>Get <a href="http://latest.chocolate-doom.org/">Nightly builds</a> from chocolate-doom.org</li>
+</ul>
+
+<!-- linux -->
+<div class="download-platform">
+    <img src="./assets/icons/linux.svg" alt="linux" />
+    <h4>Linux</h4>
+</div>
+<ul>
+    <li>
+        Get the <a href="https://flathub.org/apps/details/io.github.fabiangreffrath.Doom">flatpak</a> from flathub.org
+    </li>
+    <li>Install using apt on Ubuntu/Debian based systems: apt-get install crispy-doom</li>
+</ul>
+
+<!-- macos -->
+<div class="download-platform">
+    <img src="./assets/icons/macos.svg" alt="macos" />
+    <h4>MacOS</h4>
+</div>
+<ul>
+    <li>To install on OSX, get macports and then run: sudo port install crispy-doom</li>
+</ul>
+<!-- source -->
+<div class="download-platform">
+    <img src="./assets/icons/source.svg" alt="source" />
+    <h4>Build from source</h4>
+</div>
+<h4>Build instructions for Debian-based systems</h4>
+<p>
+    First download the <a href="https://github.com/fabiangreffrath/crispy-doom">source code</a>, then get the
+    pre-requisites:
+</p>
+<ul>
+    <li>sudo apt install build-essential automake git</li>
+    <li>sudo apt build-dep crispy-doom</li>
+</ul>
+<p>Then start the compilation:</p>
+<ul>
+    <li>cd crispy-doom</li>
+    <li>autoreconf -fiv</li>
+    <li>./configure</li>
+    <li>make</li>
+</ul>
+
+<h4>Building on Windows</h4>
+<p>
+    Brief instructions to set up a build system on Windows can be found in the
+    <a href="https://github.com/fabiangreffrath/crispy-doom/wiki/Building-on-Windows">Crispy Doom Wiki</a>. A much more
+    detailed guide is provided in the
+    <a href="https://www.chocolate-doom.org/wiki/index.php/Building_Chocolate_Doom_on_Windows">Chocolate Doom Wiki</a>,
+    but applies to Crispy Doom as well for most parts.
+</p>
+
+<h4>Building on MacOS</h4>
+<p>
+    A full guide for compilation on MacOS can be found in the
+    <a href="https://github.com/fabiangreffrath/crispy-doom/wiki/OS-X-Compilation-and-Installation-Guide"
+        >Crispy Doom Wiki</a
+    >.
+</p>

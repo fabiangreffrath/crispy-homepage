@@ -1,0 +1,121 @@
+<p>
+    Crispy Doom is a limit-removing enhanced-resolution Doom source port based on
+    <a href="https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom">Chocolate Doom</a>. Its name means that its
+    internal 640x400 resolution looks "crisp" and is also a slight
+    <a href="http://www.mathsisfun.com/recipie.html">reference</a> to its origin.
+</p>
+<h2>Synopsis</h2>
+<p>
+    Crispy Doom is a friendly fork of
+    <a href="https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom">Chocolate Doom</a> that provides a higher
+    display resolution, widescreen rendering, removes the
+    <a href="https://doomwiki.org/wiki/Static_limits">static limits</a> of the Doom engine and offers further optional
+    visual, tactical and physical enhancements while remaining entirely config file, savegame, netplay and demo
+    compatible with the original.
+</p>
+<!-- gifs -->
+<div class="image-row">
+    <figure>
+        <img class="modal-image" src="./assets/screenshots/resolution.gif" alt="resolution-comparison" />
+        <figcaption>Double the resolution</figcaption>
+    </figure>
+    <figure>
+        <img class="modal-image" src="./assets/screenshots/widescreen.gif" alt="widescreen-feature" />
+        <figcaption>Widescreen support</figcaption>
+    </figure>
+</div>
+<h2>Features:</h2>
+<ul>
+    <li>
+        Enhanced 640x400 display resolution, with the original 320x200 resolution still available in the "High
+        Resolution Rendering: Off" mode.
+    </li>
+    <li>Widescreen rendering for using all the available horizontal space of screens with aspect ratios up to 24:9.</li>
+    <li>
+        Uncapped rendering framerate with interpolation and optional vertical synchronization (VSync) with the screen
+        refresh rate.
+    </li>
+    <li>Intermediate gamma correction levels (0.5, 1.5, 2.5 and 3.5).</li>
+    <li>Removal of all static engine limits, or at least raising of the less crucial ones.</li>
+    <li>
+        Full support for the "Doom Classic" WADs shipped with the "Doom 3: BFG Edition", especially the "No Rest For The
+        Living" episode shipped in the NERVE.WAD file.
+    </li>
+    <li>Support for all versions of John Romero's Episode 5: Sigil for Ultimate Doom.</li>
+</ul>
+
+<div class="centered-single">
+    <span class="toggle-button" data-div="more-features" />
+</div>
+
+<!-- more features -->
+<div id="more-features" class="togglable-area">
+    <p>
+        In addition to the core features mentionned above, the following optional user-visible and audible features are
+        available:
+    </p>
+    <ul>
+        <li>Jumping.</li>
+        <li>Free vertical looking, including mouse look and vertical aiming.</li>
+        <li>Aiming support by a crosshair that may get directly rendered into the game world.</li>
+        <li>A new minimal Crispy HUD, displaying only the status bar numbers.</li>
+        <li>
+            Clean Screenshot feature, enabling to take screenshots without HUD elements and even without status bar
+            numbers and weapon sprites at higher screen sizes.
+        </li>
+        <li>Colorized status bar numbers, HUD texts and blood sprites for certain monsters.</li>
+        <li>Translucency for certain sprites and status bar elements in the Crispy HUD.</li>
+        <li>Randomly mirrored death animations and corpse sprites.</li>
+        <li>
+            Command line options to allow for playing with flipped player weapon sprites and/or entirely flipped level
+            geometry.
+        </li>
+        <li>Players may walk over or under monsters and hanging corpses.</li>
+        <li>Centered Weapons when firing, weapon recoil thrust and pitch.</li>
+        <li>Reports whenever a secret is revealed.</li>
+        <li>Level statistics and extended coloring in the Automap.</li>
+        <li>Playing sounds in full length, and misc. other sound fixes.</li>
+        <li>Demo recording and/or playback timers and progress bar.</li>
+        <li>
+            Demo continue and take-over features, handing controls over to the player when demo playback is finished or
+            interrupted.
+        </li>
+    </ul>
+    <p>
+        Most of these features are disabled by default and need to get enabled either in the in-game "Crispness" menu,
+        in the crispy-doom-setup tool or as command line parameters. They are implemented in a way that preserves
+        demo-compatibility with Vanilla Doom and network game compatibility with Chocolate Doom. Furthermore, Crispy
+        Doom's savegames and config files are compatible, though not identical (see the
+        <a href="https://github.com/fabiangreffrath/crispy-doom/wiki/Compatibility">Compatibility section in the Wiki</a
+        >), to Vanilla Doom's.
+    </p>
+    <p>
+        Crispy Doom strives for maximum compatibility with all "limit-removing Vanilla" maps -- but not Boom or ZDoom
+        maps. More specifically, Crispy Doom supports some select advanced features such as
+        <a href="https://doomwiki.org/wiki/ANIMATED">ANIMATED</a> and
+        <a href="https://doomwiki.org/wiki/SWITCHES">SWITCHES</a> lumps, MBF sky transfers, SMMU swirling flats and
+        <a href="https://doomwiki.org/wiki/MUSINFO">MUSINFO</a> -- but neither generalized linedef and sector types nor
+        DECORATE and MAPINFO.
+    </p>
+    <p>
+        Many additional less user-visible features have been implemented, e.g. fixed engine limitations and crashes,
+        fixed rendering bugs, fixed harmless game logic bugs, full support for DEHACKED files and lumps in BEX format,
+        additional and improved cheat codes, an improved Automap, and many more! Due to the extra DEHACKED states added
+        from <a href="https://doomwiki.org/wiki/MBF">MBF</a>, Crispy Doom supports
+        <a href="https://www.doomworld.com/forum/topic/84859-black-ops-smooth-weapons-dehacked-mod">enhancer</a>
+        <a href="https://www.doomworld.com/forum/topic/85991-smoothed-smooth-monsters-for-doom-retro-and-crispy-doom"
+            >mods</a
+        >
+        that can make the gameplay even more pleasing to the eyes. For a detailed list of features and changes please
+        refer to the release notes below.
+    </p>
+</div>
+
+<h2>Crispness</h2>
+<p>
+    Crispy Doom offers a "crispness" menu that allows the player to fine-tune settings to their liking. More details are
+    available in the <a class="link" data-to="usage" href="#">usage</a> page.
+</p>
+<div class="image-row">
+    <img class="modal-image single-row-image" src="./assets/screenshots/menu.gif" alt="cripsness-menu" />
+</div>

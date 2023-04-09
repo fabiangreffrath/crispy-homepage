@@ -1,0 +1,482 @@
+<!-- getting started -->
+<div class="header-with-icon">
+    <img src="./assets/icons/start.svg" alt="start" />
+    <h2>Getting Started</h2>
+</div>
+<p>There are 2 components that are needed in order to be able to play Classic Doom.</p>
+<div id="getting-started-components">
+    <h3>A Source Port</h3>
+    <p>
+        A <a href="https://doomwiki.org/wiki/Source_port">source port</a> is a fan-made modification of the original
+        <a href="https://doomwiki.org/wiki/Doom_engine">Doom engine</a> which was open-sourced in 1997. These are
+        available for free, and you can grab a copy of the Crispy Doom source port in the
+        <a class="link" data-to="download" href="#">Download</a> page.
+    </p>
+
+    <h3>A WAD file</h3>
+    <p>
+        While the engine was made available for free, the assets that make up the game (textures, music, maps etc...)
+        were not. You still need an original copy of Doom in order to play the original game. The assets are contained
+        in a <a href="https://doomwiki.org/wiki/WAD">WAD</a> file. Crispy Doom can play nearly all variants of Doom. If
+        you don't own any, you may download the
+        <a
+            href="http://cdn.debian.net/debian/pool/non-free/d/doom-wad-shareware/doom-wad-shareware_1.9.fixed.orig.tar.gz"
+            >Shareware</a
+        >
+        version of Doom, extract it and copy the DOOM1.WAD file into your Crispy Doom directory. Alternatively, you may
+        want to play Crispy Doom with
+        <a href="https://www.chocolate-doom.org/wiki/index.php/Freedoom">Freedoom</a> and a
+        <a href="https://doomwiki.org/wiki/Megawad">MegaWAD</a>.
+    </p>
+</div>
+
+<!-- cheats -->
+<div class="header-with-icon">
+    <img src="./assets/icons/shells.svg" alt="shells" />
+    <h2>New Cheat Codes</h2>
+</div>
+<p>
+    In addition to the default <a href="https://doomwiki.org/wiki/Doom_cheat_codes">DOOM cheat codes</a>, Crispy Doom
+    offers additional ones that offer extra variation to the gameplay. Keep in mind that cheat codes are disabled on the
+    "Nightmare!" skill level, except for the iddt and idclev cheats.
+</p>
+<div class="centered-single">
+    <span class="toggle-button" data-div="cheats" />
+</div>
+<div id="cheats" class="togglable-area">
+    <span class="command">TNTWEAP</span>
+    <p>
+        Followed by a weapon number gives or removes this weapon (8 = Chainsaw, 9 = SSG). TNTWEAP0 takes away all
+        weapons and ammo except for the pistol and 50 bullets. Try to load Doom 1 with DOOM2.WAD as a PWAD and type
+        TNTWEAP9 to play the SSG in Doom 1.
+    </p>
+    <span class="command">TNTEM, KILLEM or FHHALL</span>
+    <p>Kill all monsters on the current map (and disables all cube spitters).</p>
+    <span class="command">SPECHITS</span>
+    <p>
+        Triggers all <a href="https://doomwiki.org/wiki/Linedef_type">Linedef actions</a> on a map at once, no matter if
+        they are enabled by pushing, walking over or shooting or whether they require a key or not. It also triggers all
+        boss monster and Commander Keen actions if possible.
+    </p>
+    <span class="command">NOTARGET or FHSHH</span>
+    <p>Toggle deaf and blind monsters that do not act until attacked.</p>
+    <span class="command">TNTHOM</span>
+    <p>
+        Toggles the flashing <a href="https://doomwiki.org/wiki/Hall_of_mirrors_effect">HOM</a> indicator (disabled by
+        default).
+    </p>
+    <span class="command">SHOWFPS or IDRATE</span>
+    <p>Toggle printing the FPS in the upper right corner.</p>
+    <span class="command">NOMOMENTUM</span>
+    <p>Toggles a debug aid for pixel-perfect positioning on a map (not recommended to use in-game).</p>
+    <span class="command">GOOBERS</span>
+    <p>Triggers an easter egg, i.e. an "homage to an old friend". ;-)</p>
+    <span class="command">IDBEHOLD0</span>
+    <p>Disables all currently active power-ups (since 2.2).</p>
+    <span class="command">IDCLEV00</span>
+    <p>Restarts the current level (since 2.0).</p>
+    <span class="command">IDMUS00</span>
+    <p>Restarts the current music (new in 5.1).</p>
+    <span class="command">VERSION</span>
+    <p>Shows the engine version, build date and SDL version (new in 5.1).</p>
+    <span class="command">SKILL</span>
+    <p>Shows the current skill level (new in 5.5.2).</p>
+</div>
+
+<!-- command-line parameters -->
+<div class="header-with-icon">
+    <img src="./assets/icons/terminal.svg" alt="terminal" />
+    <h2>New Command-line Parameters</h2>
+</div>
+<p>
+    A command-line parameter is a start-up indication by the user that the engine should change its default behavior.
+    The parameters are typed after the executable's name in the command line and are followed by variables or text
+    strings, if applicable. Crispy Doom offers the below extra parameters.
+</p>
+<div class="centered-single">
+    <span class="toggle-button" data-div="commands" />
+</div>
+<div id="commands" class="togglable-area">
+    <span class="command">-dm3</span>
+    <p>Specifies the Deathmatch 3.0 rules (weapons stay, items respawn) for netgames (since 4.1).</p>
+
+    <span class="command">-episode 1 or -episode 2</span>
+    <p>
+        Episode 1 launches Hell on Earth and -episode 2 launches No Rest for the Living episode if the Doom 2 IWAD
+        shipped with the Doom 3: BFG Edition is used.
+    </p>
+
+    <span class="command">-warp 1a</span>
+    <p>Warps to the secret level E1M10: Sewers of XBox Doom IWAD (since 2.3).</p>
+
+    <span class="command">-mergedump &lt;file&gt;</span>
+    <p>
+        Merges the PWAD file(s) given on the command line with the IWAD file and writes the resulting data into the
+        &lt;file&gt; given as argument. May be considered as a replacement for the DEUSF.EXE tool (since 2.3).
+    </p>
+
+    <span class="command">-lumpdump</span>
+    <p>Dumps raw content of a lump into a file (since 5.7).</p>
+
+    <span class="command">-blockmap</span>
+    <p>Forces a (re-)building of the BLOCKMAP lumps for loaded maps (since 2.3).</p>
+
+    <span class="command">-playdemo demoname -warp N</span>
+    <p>Plays back fast-forward up to the requested map (since 3.0).</p>
+
+    <span class="command">-loadgame N -record demoname & -loadgame N -playdemo demoname</span>
+    <p>Allow to record and play demos starting from a savegame instead of the level start (since 4.0).</p>
+
+    <span class="command">-playdemo demoname1 -record demoname2</span>
+    <p>Plays back fast-forward until the end of demoname1 and continues recording as demoname2 (new in 5.5).</p>
+
+    <span class="command">-fliplevels</span>
+    <p>Loads mirrored versions of the maps (this was the default on April 1st up to version 5.0).</p>
+
+    <span class="command">-flipweapons</span>
+    <p>Flips the player's weapons (new in 5.3).</p>
+
+    <span class="command">-levelstat</span>
+    <p>Prints a levelstat.txt file with statistics for each completed level (new in 5.9.0).</p>
+
+    <span class="command">-pistolstart</span>
+    <p>Reset health, armor and inventory at start of each level in Doom (new in 5.9.2)</p>
+
+    <span class="command">-wandstart</span>
+    <p>Reset health, armor and inventory at start of each level in Heretic (new in 5.9.2)</p>
+
+    <span class="command">-doubleammo</span>
+    <p>Doubles ammo pickup rate in Doom and Strife (new in 5.11).</p>
+
+    <span class="command">-moreammo</span>
+    <p>Increases ammo pickup rate by 50% in Heretic (new in 5.11).</p>
+
+    <span class="command">-moremana</span>
+    <p>Increases mana pickup rate by 50% in Hexen (new in 5.11).</p>
+
+    <span class="command">-fast</span>
+    <p>Enables fast monsters in Heretic and Hexen (new in 5.11).</p>
+
+    <span class="command">-autohealth</span>
+    <p>Enables automatic use of Quartz flasks and Mystic urns in Heretic and Hexen (new in 5.11).</p>
+
+    <span class="command">-keysloc</span>
+    <p>Enables display of keys on the automap in Heretic (new in 5.11).</p>
+</div>
+
+<!-- cripsness menu -->
+<div class="header-with-icon">
+    <img src="./assets/icons/menu.svg" alt="menu" />
+    <h2>The Crispness Menu</h2>
+</div>
+<p>
+    Crispy Doom provides many optional features. Most of them are disabled by default, but can get enabled in the
+    Crispness menu.
+</p>
+<div class="centered-single">
+    <span class="toggle-button" data-div="crispness-menu" />
+</div>
+<div id="crispness-menu" class="togglable-area">
+    <h2>Rendering</h2>
+    <p>These options affect the rendering of the internal frame buffer to the game window.</p>
+
+    <span class="command">High Resolution Rendering</span>
+    <p>
+        Increase the internal frame buffer's rendering resolution from Doom's original 320x200 to 640x400 pixels
+        (default: on).
+    </p>
+
+    <span class="command">Widescreen Rendering</span>
+    <p>
+        Extend the rendered game scene horizontally to match the screen's aspect ratio (default: off). This feature is
+        only available if "Aspect Ratio Correction" is enabled in the setup tool. Without preserving an aspect ratio,
+        the window could just be resized arbitrarily wide.
+    </p>
+
+    <span class="command">Uncapped Framerate</span>
+    <p>
+        Update the frame buffer to the game window as soon as possible and interpolate between frames, instead of
+        updating at Doom's original fixed rate of 35 FPS (default: off).
+    </p>
+
+    <span class="command">Enable VSync</span>
+    <p>Synchronize the updating of the frame buffer with the screen's own vertical refresh rate (default: on).</p>
+
+    <span class="command">Smooth Pixel Scaling</span>
+    <p>Upscale the frame buffer to the game window's resolution by means of linear interpolation (default: on).</p>
+
+    <h2>Visual</h2>
+    <p>These features change the visual appearance of the game.</p>
+
+    <span class="command">Colorize HUD Elements</span>
+    <ul>
+        <li>
+            Status Bar: Colorize Status Bar widgets (i.e. Ammo, Health and Armor) by their respective value, from blue
+            (&gt; 100%) over green (normal) and gold (&lt; 50%) to red (critical).
+        </li>
+        <li>
+            HUD Texts: Highlight specific parts of HUD messages, e.g. when trying to open a key-locked door, by their
+            respective color. Furthermore, colorize widgets like the map name on the Automap, or level statistics and
+            player coordinates if enabled.
+        </li>
+        <li>Both.</li>
+        <li>Off: Disabled (default).</li>
+    </ul>
+    <span class="command">Enable Translucency</span>
+    <ul>
+        <li>Projectiles: Render certain projectiles, e.g. plasma balls and monsters' fireballs, translucently.</li>
+        <li>Items: Render certain items, e.g. power-up spheres and teleport fog, translucently.</li>
+        <li>Both.</li>
+        <li>Off: Disabled (default).</li>
+    </ul>
+    <span class="command">Smooth Diminishing Lighting</span>
+    <p>
+        Apply smoother diminishing lighting of the game scene with increasing distance from the player by using 32 light
+        levels instead of 16 (default: off).
+    </p>
+
+    <span class="command">Apply Brightmaps to</span>
+    <ul>
+        <li>
+            Walls: Highlight certain parts of wall textures and ceiling/floor flats that resemble light sources, e.g.
+            switches and computer panels.
+        </li>
+        <li>
+            Items: Highlight certain parts of pick-up and weapon sprites as well as explosive barrels that resemble
+            light sources, e.g. status lights on weapons and ammo.
+        </li>
+        <li>Both.</li>
+        <li>None: Disabled (default).</li>
+    </ul>
+
+    <span class="command">Colored Blood and Corpses</span>
+    <p>
+        Colorize the blood sprites and the sprites of crushed corpses for certain monsters (e.g. green for Barons of
+        Hell and Hell Knights, blue for Cacodemons). Furthermore, render Spectres' blood sprites with the invisibility
+        blur and turn Lost Souls' blood into puffs. Additionally, randomly colorize decorative marine corpses (default:
+        off).
+    </p>
+
+    <span class="command">Randomly Mirrored Corpses</span>
+    <p>
+        Randomly flip death animations and corpse sprites for certain monsters as well as decorative marine corpses
+        (default: off).
+    </p>
+
+    <h2>Audible</h2>
+    <p>These features change the visual appearance of the game.</p>
+
+    <span class="command">Play Sounds in Full Length</span>
+    <p>
+        Prevent one sound effect cutting off the previous one, e.g the chainsaw's idle sound interrupting its own
+        start-up sound. Also, continue playing a sound effect even if the corresponding thing was removed from the map,
+        e.g. an exploding barrel or a rocket impacting on a wall (default: off).
+    </p>
+
+    <span class="command">Misc. Sound Fixes</span>
+    <p>
+        Miscellaneous small fixes to sound quirks considered to be bugs in Vanilla Doom, e.g. fast doors making two
+        closing sounds (default: on).
+    </p>
+
+    <span class="command">Sound Channels</span>
+    <p>The number of sound effects that can be played back simultaneously.</p>
+    <ul>
+        <li>8 (as in Vanilla Doom and Strife, default).</li>
+        <li>16(as in Heretic and Hexen).</li>
+        <li>32.</li>
+    </ul>
+
+    <span class="command">Mono SFX</span>
+    <p>
+        Play all sound effects in mono, i.e. without stereo separation (default: off). While this may limit orientation
+        and enemy localization, it reportedly helps players who quickly feel nauseous.
+    </p>
+
+    <h2>Navigational</h2>
+    <p>These features help with navigation within the maps.</p>
+
+    <span class="command">Extended Automap Colors</span>
+    <p>
+        Apply a more diverse and convenient color scheme to the Automap, e.g. doors and switches locked by keys are
+        drawn in their respective colors, teleports are drawn in green and unrevealed secret sectors are drawn in purple
+        (default: on).
+    </p>
+
+    <span class="command">Show Level Stats</span>
+    <p>Show Kills (K), Items (I) and Secrets (S) statistics in the top left corner of the screen (current/total).</p>
+    <ul>
+        <li>Always.</li>
+        <li>In Automap.</li>
+        <li>Never (default).</li>
+    </ul>
+    <span class="command">Show Level Time</span>
+    <p>Show the time that has ticked away since the level started in the top left corner of the screen (MM:SS).</p>
+    <ul>
+        <li>Always.</li>
+        <li>In Automap.</li>
+        <li>Never (default).</li>
+    </ul>
+    <span class="command">Show Player Coords</span>
+    <p>
+        Show the player's X and Y coordinates and the horizontal view angle (A) in the top right corner of the screen.
+    </p>
+    <ul>
+        <li>In Automap.</li>
+        <li>Never (default).</li>
+    </ul>
+    <p>There is no "Always" option for this feature as this is considered to be cheating during demo recordings.</p>
+
+    <span class="command">Show Revealed Secrets</span>
+    <p>Show a centered golden message and play a sound effect whenever a secret is revealed.</p>
+    <ul>
+        <li>On: Show a plain "A secret is revealed!" message.</li>
+        <li>Count: Show a "Secret M of N revealed!" message, where N is the total number of secrets in the map.</li>
+        <li>Off (default).</li>
+    </ul>
+
+    <h2>Tactical</h2>
+    <p>These features provide some tactical advantage by adding to the realism of the game.</p>
+
+    <span class="command">Allow Free Look</span>
+    <p>
+        Allow looking up and down either by pushing keyboard keys (usually bound to the PgDn and Del keys, as in
+        Heretic) or by vertical mouse movement while holding a dedicated mouse button.
+    </p>
+    <ul>
+        <li>Spring: Center the view angle once the key or mouse button is released.</li>
+        <li>Lock: Keep the view angle, even after the key or mouse button is released.</li>
+        <li>Off (default).</li>
+    </ul>
+
+    <p>Enabling this feature will cause the sky texture to become vertically stretched.</p>
+
+    <span class="command">Permanent Mouse Look</span>
+    <p>
+        Allow looking up and down by vertical mouse movement without the need to hold a dedicated key or mouse button
+        (default: off).
+    </p>
+    <p>Enabling this feature will cause the sky texture to become vertically stretched.</p>
+
+    <span class="command">Player View/Weapon Bobbing</span>
+    <p>Set the player view and weapon sprite bobbing amplitude.</p>
+    <ul>
+        <li>Full: Set player view and weapon sprite bobbing to full amplitude, as in vanilla Doom (default).</li>
+        <li>
+            75%: Reduce player view and weapon sprite bobbing amplitude to 75%, as in the Doom Classic engine of the
+            Doom 3: BFG Edition.
+        </li>
+        <li>
+            Off: Disable player view and weapon sprite bobbing. Weapon sprites remain centered, as in e.g. Wolfenstein
+            3-D.
+        </li>
+    </ul>
+    <p>Obviously, disabling weapon sprite bobbing will render the "Weapon Attack Alignment" feature useless.</p>
+
+    <span class="command">Weapon Attack Alignment</span>
+    <p>When attacking, align the weapon sprite relative to the center of the screen.</p>
+    <ul>
+        <li>Off: The weapon sprite's position remains unchanged when attacking, as in vanilla Doom (default).</li>
+        <li>
+            Centered: The weapon sprite gets centered horizontally and pushed up vertically into its idle position, as
+            in e.g. Jaguar Doom.
+        </li>
+        <li>Bobbing: The weapon sprite continues to bob as it does while the player is moving.</li>
+    </ul>
+    <span class="command">Squat Weapon Down on Impact</span>
+    <p>
+        Move the weapon sprite down and up again after falling down from a certain height to give a more realistic
+        impression of the impact on the floor (default: off).
+    </p>
+
+    <span class="command">Weapon Recoil Pitch</span>
+    <p>
+        When firing, give an impression of the weapon pushing up by slightly changing the player's vertical view angle
+        without affecting the trajectory (default: off).
+    </p>
+
+    <p>Enabling this feature will cause the sky texture to become vertically stretched.</p>
+
+    <span class="command">Negative Player Health</span>
+    <p>Allow the player's health to go below 0, to give an impression of the lethal hit's damage (default: off).</p>
+
+    <h2>Crosshair</h2>
+    <p>These options change the appearance of the "crosshair" aiming aid.</p>
+
+    <span class="command">Draw Crosshair</span>
+    <p>Draw the crosshair aiming aid.</p>
+    <ul>
+        <li>Static: The crosshair is drawn in the center of the screen.</li>
+        <li>
+            Projected: The crosshair is projected into the game scene, moving with the player and showing exactly where
+            the player's shot would hit.
+        </li>
+        <li>Off (default).</li>
+    </ul>
+
+    <span class="command">Crosshair Shape</span>
+    <p>Set the shape of the crosshair.</p>
+    <ul>
+        <li>Cross: + (default).</li>
+        <li>Chevron: ^</li>
+        <li>Dot: .</li>
+    </ul>
+
+    <span class="command">Color Indicates Health</span>
+    <p>
+        Colorize the crosshair depending on the player's health value, using the same color scheme as the Status Bar's
+        Health widget (default: off).
+    </p>
+
+    <span class="command">Highlight on Target</span>
+    <p>Highlight the crosshair if the shot would hit an enemy (default: off).</p>
+
+    <h2>Physical</h2>
+    <p>
+        These features change the game physics. They are forcefully disabled during demo recording and playback as well
+        as network games.
+    </p>
+
+    <span class="command">Vertical Aiming</span>
+    <ul>
+        <li>
+            Autoaim: Help the player aiming by guiding the shot trajectory towards monsters, as in Vanilla Doom
+            (default).
+        </li>
+        <li>Direct: Aim the shot trajectory exactly into the player's looking direction.</li>
+        <li>Both: As above, but enable "Autoaim" if a shot would miss a monster otherwise.</li>
+    </ul>
+
+    <span class="command">Allow Jumping</span>
+    <p>
+        Allow the player to jump (usually bound to the / key) either "high", as in Hexen, or "low", as in Strife
+        (default: off).
+    </p>
+
+    <span class="command">Walk over/under Monsters</span>
+    <p>Allow the player to walk across monsters' heads or beneath flying monsters (default: off).</p>
+
+    <span class="command">Weapon Recoil Thrust</span>
+    <p>Apply some reverse horizontal momentum to the player when shooting a weapon (default: off).</p>
+
+    <h2>Demos</h2>
+    <p>These features provide some additional information when recording or playing back demos.</p>
+
+    <span class="command">Show Demo Timer</span>
+    <p>
+        Show a small timer widget in the upper right corner of the screen during demo recording and/or playback
+        (default: off).
+    </p>
+
+    <span class="command">Playback Timer Direction</span>
+    <p>
+        If the "Demo Timer" widget is enabled during demo playback, decide whether it counts up the elapsed time since
+        the demo started (forward, default) or the remaining time until it ends (backward).
+    </p>
+
+    <span class="command">Show Demo Progress Bar</span>
+    <p>
+        Show a black/white progress bar at the bottom of the screen that fills up from left to right during demo
+        playback (default: off).
+    </p>
+</div>
