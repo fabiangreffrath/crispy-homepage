@@ -1,4 +1,4 @@
-import { randomInRange } from './helpers.js';
+import { Helpers } from './Helpers.js';
 
 const PIXELATEDBACKGROUND = document.getElementById('pixelated-background');
 const LOWESTOFFSET = 300; // Y position at which opacity stops changing
@@ -15,7 +15,7 @@ export class BackgroundController {
     }
 
     setRandomImage() {
-        const roll = randomInRange(1, NUMBEROFIMAGES);
+        const roll = Helpers.randomInRange(1, NUMBEROFIMAGES);
         const backgroundImageString = `url("./assets/backgrounds/${roll}.png")`;
         PIXELATEDBACKGROUND.style.backgroundImage = backgroundImageString;
     }

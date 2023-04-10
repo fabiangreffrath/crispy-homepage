@@ -1,11 +1,10 @@
-import { PageController } from './modules/page-controller.js';
-import { ModalController } from './modules/modal-controller.js';
-import { BackgroundController } from './modules/background-controller.js';
-import { ElementController } from './modules/element-controller.js';
-import { stitchPages } from './modules/helpers.js';
+import { PageController } from './modules/PageController.js';
+import { ModalController } from './modules/ModalController.js';
+import { BackgroundController } from './modules/BackgroundController.js';
+import { ElementController } from './modules/ElementController.js';
+import { PageBuilder } from './modules/PageBuilder.js';
 
-await stitchPages();
-
+await PageBuilder.buildMainPages();
 const pageController = new PageController();
 const modalController = new ModalController();
 const backgroundController = new BackgroundController();
