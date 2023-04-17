@@ -1,17 +1,18 @@
 #!/bin/bash
 
-session='CRISPY'
-
 # create session
-tmux new-session -d -s $session
+SESSION='CRISPY'
+tmux new-session -d -s $SESSION
 
-# docker
-tmux rename-window -t 0 'docker'
-tmux send-keys -t $session:0 'docker-compose -f nginx.yaml up' C-m
+# create windows
+tmux rename-window -t $SESSION:0 'docker'
+tmux new-window -t $SESSION:1 -n 'code'
 
-# code
-tmux new-window -t $session:1 -n 'code'
-tmux send-keys -t $session:1 'nvim' C-m
+sleep 1 # wait until shell has loaded on all panes
+
+# send appropriate keys to each window
+tmux send-keys -t $SESSION:0 'docker-compose -f nginx.yaml up' C-m
+tmux send-keys -t $SESSION:1 'nvim' C-m
 
 # attach
-tmux a
+tmux a -t $SESSION
