@@ -2,12 +2,17 @@ const md = window.markdownit();
 
 const CHEATS_URL = 'https://raw.githubusercontent.com/kiwphi/crispy-doom/master/docs/cheats.md';
 const PARAMS_URL = 'https://raw.githubusercontent.com/kiwphi/crispy-doom/master/docs/params.md';
+const CRISPNESS_URL = 'https://raw.githubusercontent.com/kiwphi/crispy-doom/master/docs/crispness.md';
 
 export class PageBuilder {
     static async buildPages() {
+        // stitch local page stogether
         await this.stitchPages();
+
+        // fetch from crispy-doom repo
         await this.fetchCheats();
         await this.fetchParams();
+        await this.fetchCrispness();
     }
 
     static async stitchPages() {
@@ -32,5 +37,12 @@ export class PageBuilder {
     static async fetchParams() {
         const res = await fetch(PARAMS_URL);
         document.getElementById('params').innerHTML = md.render(await res.text());
+    }
+
+    static async fetchCrispness() {
+        const res = await fetch(CRISPNESS_URL);
+        const text = await res.text();
+        console.log(md.render(text));
+        document.getElementById('crispness-menu').innerHTML = md.render(text);
     }
 }

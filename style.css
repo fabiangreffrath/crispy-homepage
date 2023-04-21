@@ -132,7 +132,8 @@ a {
 }
 
 #cheats code,
-#params code {
+#params code,
+#crispness-menu p:first-child {
     font-size: 1rem;
     display: block;
     padding: 7px 15px;
@@ -147,21 +148,11 @@ a {
 }
 
 #cheats ul,
-#params ul {
+#params ul,
+#crispness-menu > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-.command {
-    display: block;
-    padding: 7px 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 3px;
-}
-
-.command-wrapper p {
-    margin: 0.5rem 1rem 2rem;
 }
 
 .header-with-icon {
