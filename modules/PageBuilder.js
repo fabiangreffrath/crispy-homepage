@@ -1,5 +1,16 @@
+const md = window.markdownit();
+
+const CHEATS_URL = 'https://raw.githubusercontent.com/kiwphi/crispy-doom/master/docs/cheats.md';
+const PARAMS_URL = 'https://raw.githubusercontent.com/kiwphi/crispy-doom/master/docs/params.md';
+
 export class PageBuilder {
-    static async buildMainPages() {
+    static async buildPages() {
+        await this.stitchPages();
+        await this.fetchCheats();
+        await this.fetchParams();
+    }
+
+    static async stitchPages() {
         let res;
         res = await fetch('./pages/about.html');
         document.getElementById('about').innerHTML = await res.text();
@@ -11,5 +22,15 @@ export class PageBuilder {
         // download page
         res = await fetch('./pages/download.html');
         document.getElementById('download').innerHTML = await res.text();
+    }
+
+    static async fetchCheats() {
+        const res = await fetch(CHEATS_URL);
+        document.getElementById('cheats').innerHTML = md.render(await res.text());
+    }
+
+    static async fetchParams() {
+        const res = await fetch(PARAMS_URL);
+        document.getElementById('params').innerHTML = md.render(await res.text());
     }
 }

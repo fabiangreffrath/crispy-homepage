@@ -5,7 +5,7 @@ import { ElementController } from './modules/ElementController.js';
 import { PageBuilder } from './modules/PageBuilder.js';
 
 // get scattered html content & generate pages
-await PageBuilder.buildMainPages();
+await PageBuilder.buildPages();
 
 // main content & navbar loader
 const pageController = new PageController();
