@@ -1,4 +1,4 @@
-<img src="repo/banner.png" width="400" alt="banner">
+<img src="assets/repo/banner.png" width="400" alt="banner">
 
 ## About
 
