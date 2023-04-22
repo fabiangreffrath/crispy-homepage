@@ -21,9 +21,9 @@ A static-site-generator might be used in the future if the content becomes too g
 
 ## License
 
--   The _source-code_, mostly contained within the ./modules directory
+-   The _source-code_, mostly contained within the _./modules_ directory
     is under the [GNU GPL-3.0 License](https://github.com/kiwphi/crispy-homepage/blob/main/LICENSE).
--   The _assets_, which are all contained within the ./assets directory
+-   The _assets_, which are all contained within the _./assets_ directory
     and are not under the same license. Each asset is owned by its respective author.
 
 ## Acknowledgments
