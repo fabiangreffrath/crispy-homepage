@@ -97,6 +97,12 @@ a {
 
 /* pages & content */
 
+kbd {
+    font-size: 1rem;
+    font-weight: 800;
+     p
+}
+
 .centered-single {
     margin-top: 1.5rem;
     display: flex;
