@@ -2,6 +2,7 @@ const PAGES = {
     about: document.getElementById('about'),
     usage: document.getElementById('usage'),
     download: document.getElementById('download'),
+    help: document.getElementById('help'),
 };
 
 export class PageController {
