@@ -3,6 +3,7 @@ const md = window.markdownit();
 const CHEATS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/cheats.md';
 const PARAMS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/params.md';
 const CRISPNESS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/crispness.md';
+const COMPATIBILITY_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/compatibility.md';
 
 export class PageBuilder {
     static async buildPages() {
@@ -13,6 +14,7 @@ export class PageBuilder {
         await this.fetchCheats();
         await this.fetchParams();
         await this.fetchCrispness();
+        await this.fetchCompatibility();
     }
 
     static async stitchPages() {
@@ -41,7 +43,11 @@ export class PageBuilder {
 
     static async fetchCrispness() {
         const res = await fetch(CRISPNESS_URL);
-        const text = await res.text();
-        document.getElementById('crispness-menu').innerHTML = md.render(text);
+        document.getElementById('crispness-menu').innerHTML = md.render(await res.text());
+    }
+
+    static async fetchCompatibility() {
+        const res = await fetch(COMPATIBILITY_URL);
+        document.getElementById('compatibility').innerHTML = md.render(await res.text());
     }
 }
