@@ -1,11 +1,31 @@
 const md = window.marked;
 
-const CHEATS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/cheats.md';
-const PARAMS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/params.md';
-const CRISPNESS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/crispness.md';
-const COMPATIBILITY_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/compatibility.md';
-const CONTROLS_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/controls.md';
-const FAQ_URL = 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/faq.md';
+const CONTENT_TO_FETCH = [
+    {
+        element: 'cheats',
+        url: 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/cheats.md',
+    },
+    {
+        element: 'params',
+        url: 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/params.md',
+    },
+    {
+        element: 'crispness-menu',
+        url: 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/crispness.md',
+    },
+    {
+        element: 'compatibility',
+        url: 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/compatibility.md',
+    },
+    {
+        element: 'controls',
+        url: 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/controls.md',
+    },
+    {
+        element: 'faq',
+        url: 'https://raw.githubusercontent.com/fabiangreffrath/crispy-doom/master/docs/faq.md',
+    },
+];
 
 export class PageBuilder {
     static async buildPages() {
@@ -13,12 +33,7 @@ export class PageBuilder {
         await this.stitchPages();
 
         // fetch from crispy-doom repo
-        await this.fetchCrispness();
-        await this.fetchCheats();
-        await this.fetchParams();
-        await this.fetchControls();
-        await this.fetchFaq();
-        await this.fetchCompatibility();
+        await this.fetchContent();
     }
 
     static async stitchPages() {
@@ -39,33 +54,10 @@ export class PageBuilder {
         document.getElementById('help').innerHTML = await res.text();
     }
 
-    static async fetchCrispness() {
-        const res = await fetch(CRISPNESS_URL);
-        document.getElementById('crispness-menu').innerHTML = md.parse(await res.text());
-    }
-
-    static async fetchCheats() {
-        const res = await fetch(CHEATS_URL);
-        document.getElementById('cheats').innerHTML = md.parse(await res.text());
-    }
-
-    static async fetchParams() {
-        const res = await fetch(PARAMS_URL);
-        document.getElementById('params').innerHTML = md.parse(await res.text());
-    }
-
-    static async fetchControls() {
-        const res = await fetch(CONTROLS_URL);
-        document.getElementById('controls').innerHTML = md.parse(await res.text());
-    }
-
-    static async fetchFaq() {
-        const res = await fetch(FAQ_URL);
-        document.getElementById('faq').innerHTML = md.parse(await res.text());
-    }
-
-    static async fetchCompatibility() {
-        const res = await fetch(COMPATIBILITY_URL);
-        document.getElementById('compatibility').innerHTML = md.parse(await res.text());
+    static async fetchContent() {
+        CONTENT_TO_FETCH.forEach(async (content) => {
+            const res = await fetch(content.url);
+            document.getElementById(content.element).innerHTML = md.parse(await res.text());
+        });
     }
 }
