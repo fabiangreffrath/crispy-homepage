@@ -1,9 +1,5 @@
 <img src="assets/repo/banner.png" width="400" alt="banner">
 
-[![commit](https://img.shields.io/github/languages/code-size/kiwphi/crispy-homepage?style=flat)](https://github.com/kiwphi/crispy-homepage)
-[![commit](https://img.shields.io/github/license/kiwphi/crispy-homepage?style=flat)](https://github.com/kiwphi/crispy-homepage/blob/main/LICENSE)
-[![commit](https://img.shields.io/github/last-commit/kiwphi/crispy-homepage?style=flat)](https://github.com/kiwphi/crispy-homepage/commits/main)
-
 ## About
 
 This is the homepage of [Crispy Doom](https://github.com/fabiangreffrath/crispy-doom),
@@ -18,12 +14,12 @@ a limit-removing enhanced-resolution Doom source port based on [Chocolate Doom](
 #### Development notes:
 
 -   Most of the website's text content is fetched from the [docs/ directory](https://github.com/fabiangreffrath/crispy-doom/tree/master/docs)
-    of the Crispy Doom repo. See the [PageBuilder class](https://github.com/kiwphi/crispy-homepage/blob/main/modules/PageBuilder.js).
+    of the Crispy Doom repo. See the [PageBuilder class](https://github.com/fabiangreffrath/crispy-homepage/blob/main/modules/PageBuilder.js).
 
 -   In order to avoid using external libraries for simple things, most of the functionality
-    is built from scratch ([image modals](https://github.com/kiwphi/crispy-homepage/blob/main/modules/ModalController.js),
-    [togglable divs](https://github.com/kiwphi/crispy-homepage/blob/main/modules/ElementController.js),
-    [background scroll effects](https://github.com/kiwphi/crispy-homepage/blob/main/modules/BackgroundController.js)…).
+    is built from scratch ([image modals](https://github.com/fabiangreffrath/crispy-homepage/blob/main/modules/ModalController.js),
+    [togglable divs](https://github.com/fabiangreffrath/crispy-homepage/blob/main/modules/ElementController.js),
+    [background scroll effects](https://github.com/fabiangreffrath/crispy-homepage/blob/main/modules/BackgroundController.js)…).
     A static-site-generator might be used in the future if the content becomes too great to manage.
 
 -   The only external library being used for the time being is [Marked](https://github.com/markedjs/marked), a markdown
@@ -32,7 +28,7 @@ a limit-removing enhanced-resolution Doom source port based on [Chocolate Doom](
 ## License
 
 -   The _source-code_, mostly contained within the _./modules_ directory
-    is under the [GNU GPL-3.0 License](https://github.com/kiwphi/crispy-homepage/blob/main/LICENSE).
+    is under the [GNU GPL-3.0 License](https://github.com/fabiangreffrath/crispy-homepage/blob/main/LICENSE).
 -   The _assets_, which are all contained within the _./assets_ directory
     and are not under the same license. Each asset is owned by its respective author.
 -   The [Marked](https://github.com/markedjs/marked) parser is under the [MIT License](https://github.com/markedjs/marked/blob/master/LICENSE.md).
